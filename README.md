@@ -1,53 +1,192 @@
 # Customer Churn Analytics & Prediction
 
+Predicting customer churn using Machine Learning and uncovering the key factors influencing customer retention.
+
 ## Project Overview
 
-This project analyzes customer churn behavior and builds machine learning models to predict customer attrition.
+Customer churn is one of the most important business challenges for subscription-based companies. Retaining existing customers is often more cost-effective than acquiring new ones.
 
-The project includes:
+This project analyzes customer behavior patterns and builds machine learning models to predict whether a customer is likely to churn.
 
-- Data Cleaning & Preprocessing
+The project follows a complete data science workflow:
+
+- Data Cleaning and Preprocessing
 - Exploratory Data Analysis (EDA)
-- Logistic Regression
-- Random Forest Classification
-- Feature Importance Analysis
+- Feature Engineering
+- Machine Learning Model Training
+- Model Evaluation
+- Business Insights Generation
 
-## Dataset
+---
 
-IBM Telco Customer Churn Dataset
+## Dataset Information
 
-Records: 7,043 Customers
+**Dataset:** IBM Telco Customer Churn Dataset
 
-## Tools & Technologies
+### Dataset Statistics
+
+- Records: 7,032 customers
+- Features: 21 columns
+- Target Variable: Churn
+
+### Features Include
+
+- Demographics
+- Customer tenure
+- Contract type
+- Internet services
+- Payment methods
+- Monthly charges
+- Total charges
+
+---
+
+## Project Structure
+
+```text
+customer-churn-analytics/
+│
+├── data/
+│   ├── raw/
+│   │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+│   │
+│   └── processed/
+│       └── cleaned_telco_churn.csv
+│
+├── models/
+│   └── churn_model.pkl
+│
+├── notebooks/
+│   ├── 01_data_cleaning.ipynb
+│   ├── 02_eda.ipynb
+│   └── 03_model_training.ipynb
+│
+├── reports/
+│   └── insights.md
+│
+├── src/
+│
+├── dashboard/
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+## Exploratory Data Analysis
+
+The dataset was explored to identify patterns and relationships associated with customer churn.
+
+Key analysis areas:
+
+- Churn Distribution
+- Contract Type Analysis
+- Tenure Analysis
+- Monthly Charges Analysis
+- Customer Retention Trends
+
+---
+
+## Key Business Insights
+
+### 1. Contract Type Strongly Impacts Churn
+
+Customers on month-to-month contracts exhibit significantly higher churn rates.
+
+### 2. Tenure is a Major Predictor
+
+Customers with shorter tenure are more likely to leave.
+
+### 3. Monthly Charges Influence Churn
+
+Higher monthly charges correlate with increased churn probability.
+
+### 4. Long-Term Customers are More Loyal
+
+Customers with longer relationships tend to remain with the company.
+
+### 5. Most Important Predictors
+
+- Tenure
+- Contract Type
+- Monthly Charges
+- Total Charges
+
+---
+
+## Machine Learning Models
+
+### Logistic Regression
+
+Accuracy: **78.54%**
+
+### Random Forest Classifier
+
+Accuracy: **78.82%**
+
+### Model Comparison
+
+| Model               | Accuracy |
+| ------------------- | -------- |
+| Logistic Regression | 78.54%   |
+| Random Forest       | 78.82%   |
+
+Random Forest achieved the best overall performance.
+
+---
+
+## Technologies Used
 
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
-- Scikit-Learn
+- Scikit-learn
+- Joblib
 - Jupyter Notebook
 
-## Key Insights
+---
 
-- Month-to-month contracts experience the highest churn.
-- Customers with lower tenure are more likely to churn.
-- Higher monthly charges are associated with increased churn.
-- Contract type is one of the strongest churn indicators.
+## Model Deployment
 
-## Model Performance
+The trained model is saved using Joblib:
 
-### Logistic Regression
+```python
+import joblib
 
-Accuracy: 78.5%
+joblib.dump(model, "models/churn_model.pkl")
+```
 
-### Random Forest
+The model can be loaded for future predictions:
 
-Accuracy: (Insert your result)
+```python
+model = joblib.load("models/churn_model.pkl")
+```
+
+---
 
 ## Future Improvements
 
-- XGBoost
+- Streamlit Dashboard Deployment
 - Hyperparameter Tuning
-- Streamlit Dashboard
-- Customer Risk Scoring System
+- ROC-AUC Evaluation
+- Precision-Recall Analysis
+- XGBoost Implementation
+- Real-Time Churn Prediction Interface
+
+---
+
+## Author
+
+Palak Patel
+
+B.Tech ICT Student
+
+Aspiring Data Analyst | Data Science Enthusiast | Machine Learning Learner
+
+```
+
+```
