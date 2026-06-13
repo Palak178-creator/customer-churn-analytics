@@ -1,6 +1,12 @@
 # Customer Churn Analytics & Prediction
 
-Predicting customer churn using Machine Learning and uncovering the key factors influencing customer retention.
+## Live Dashboard
+
+🔗 https://customer-churn-analytics-gnjbsquqqccntizmjypzau.streamlit.app
+
+## Project Overview
+
+This project analyzes customer churn behavior using machine learning and data analytics techniques. The project includes data cleaning, exploratory data analysis, predictive modeling, and an interactive Streamlit dashboard.
 
 ## Project Overview
 
