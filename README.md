@@ -118,6 +118,18 @@ Customers with longer relationships tend to remain with the company.
 
 ## Machine Learning Models
 
+## Model Evaluation
+
+### Random Forest
+
+- Accuracy: 78.82%
+- ROC-AUC Score: 0.815
+- Precision: 0.63
+- Recall: 0.48
+- F1 Score: 0.55
+
+The model demonstrates good discriminative capability and effectively identifies customer churn patterns.
+
 ### Logistic Regression
 
 Accuracy: **78.54%**
